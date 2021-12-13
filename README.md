@@ -1,33 +1,18 @@
-# Github Pages Fileserver
-A simple fileserver which runs on top of Github pages
+# pages-tunnel
+Based on [this awesome thingy](https://github.com/Karlheinzniebuhr/ghpages-fileserver).
 
-## DEMO
-[http://karlheinzniebuhr.github.io/resources.html](http://karlheinzniebuhr.github.io/resources/)
+This project lets you easily get an [Underground](https://github.com/undergroundstore/Underground) tunnel running on GitHub's infrastructure, eliminating the need for you to own and maintain server technology. Still not convinced? The Rebirth-Devs team (us weirdos who made Underground) use it for our tunnels!
 
-## Get started
-- Setup your Github page here https://pages.github.com/ 
-- Clone it:
-```bash
-git clone https://github.com/username/username.github.io
-```
-- Clone ghpages-fileserver
-```bash
-git clone https://github.com/Karlheinzniebuhr/ghpages-fileserver
-```
-- Move or copy content to username.github.io folder  
-```bash
-cp -r ghpages-fileserver/ username.github.io/
-```
-- Start Jekyll
-```bash
-cd username.github.io
-jekyll serve
-```
-- Open Webbrowser at [http://localhost:4000/](http://localhost:4000/)
+## Setup:
+  - Open [GitHub web](https://github.com) and [fork this repository](https://github.com/undergroundstore/pages-tunnel/fork).
+  - Open the fork, still on [GitHub.com](https://github.com).
+  - Navigate to the settings panel.
+  - On the left pane, select `Pages`.
+  - Change the `source` to the `master` branch as shown:
+  ![image](https://user-images.githubusercontent.com/77066742/145821999-49ac135f-9481-4f0c-a86c-1922dada2d1d.png)
+  - Click `Save`.
+  - Wait for GitHub's runners to deploy the site.
+  
+You can now edit the files in the `/resources/` directory in your repository, either on [GitHub.com](https://github.com) or using a code editor like [VScodium](https://vscodium.com), to change the files on the server. Note that GitHub Pages will have to re-deploy the site every time you `push` changes to or `merge` changes into `master`.
 
-## Add content to your server
-- Just put your stuff inside the /resources/ folder and commit & push
-- Open your page at https://username.github.io
-
-## Important
-Github will complain if you host binaries and/or very large files. If you upload Binaries compress (Zip) them first and try to not abuse with file size. 
+For the GitLab-compatible version, see [this GitGud.io repository](https://gitgud.io/underground/pages-tunnel-gitlab-pages).
